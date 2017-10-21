@@ -7,11 +7,11 @@ WORKDIR /usr/src/app
 COPY . .
 
 RUN ["chmod", "+x", "/usr/src/app/wlmscpfs"]
-RUN ["chmod", "rw-", "/usr/src/app/worklistDir"]
+RUN ["chmod", "rw-", "/usr/src/app/worklistDir/"]
 
 
 ENV DCMDICTPATH="/usr/src/app/dicom.dic"
 
 EXPOSE 104
 
-CMD [ "/usr/src/app/wlmscpfs", "-dfp","/usr/src/app/worklistDir","104"]
+CMD [ "/usr/src/app/wlmscpfs", "-dfp","/usr/src/app/worklistDir/","104"]
