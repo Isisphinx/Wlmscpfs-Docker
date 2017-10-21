@@ -11,4 +11,5 @@ RUN ["chmod", "+x", "/usr/src/app/wlmscpfs"]
 ENV DCMDICTPATH="/usr/src/app/dicom.dic"
 
 EXPOSE 104
-CMD [ "./wlmscpfs", "-dfp","worklistDir","104"]
+
+CMD [ "/usr/src/app/wlmscpfs", "-dfp","/usr/src/app/worklistDir","104"]
