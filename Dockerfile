@@ -6,11 +6,10 @@ WORKDIR /usr/src/app
 # Bundle app source
 COPY . .
 
-RUN ["chmod", "+x", "/usr/src/app/wlmscpfs"]
-RUN ["chmod","644", "/usr/src/app/worklistDir/"]
+RUN ["chmod", "+x", "wlmscpfs"]
 
 ENV DCMDICTPATH="/usr/src/app/dicom.dic"
 
 EXPOSE 104
 
-CMD [ "/usr/src/app/wlmscpfs", "-dfp","/usr/src/app/worklistDir/","104"]
+CMD [ "./wlmscpfs", "-dfp","worklistDir/","104"]
