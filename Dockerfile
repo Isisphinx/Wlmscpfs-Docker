@@ -7,8 +7,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 RUN ["chmod", "+x", "/usr/src/app/wlmscpfs"]
-RUN ["ls", "/usr/src/app/worklistDir/"]
-
+RUN ["chmod","777", "/usr/src/app/worklistDir/"]
 
 ENV DCMDICTPATH="/usr/src/app/dicom.dic"
 
